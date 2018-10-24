@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" type="text/css" href="vendors\css\normalize.css">
     <link rel="stylesheet" type="text/css" href="resources\css\style.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic">
     <link rel="stylesheet" type="text/css" href="vendors\css\grid.css">
     <link rel="stylesheet" type="text/css" href="vendors\css\ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="resources\css\queries.css">
     <meta charset="utf-8">
     <title>Omnifood</title>
   </head>
   <body>
-    <header>.
-      <nav>
+    <header>
+      <nav class="sticky">
         <div class="row">
           <img src="resources\img\logo-white.png" alt="Omnifood logo" class="logo">
+          <img src="resources\img\logo.png" alt="Omnifood logo" class="logo-black">
           <ul class="main-nav">
             <li><a href="#">Food delivery</a></li>
             <li><a href="#">How it works</a></li>
@@ -29,7 +34,7 @@
       </div>
     </header>
 
-    <section class="section-features">
+    <section class="section-features js--section-features">
       <div class="row">
         <h2>Get food fast &mdash; not fast food</h2>
         <p class="long-copy">Hello, we're Omnifood, your new premium food deliever service. We know you're always busy. No time for cooking. So let us take care of that, we're really good at it, we promise!</p>
@@ -308,7 +313,7 @@
       <form class="contact-form" action="#" method="post">
         <div class="row">
           <div class="col span-1-of-3">
-            <label>Name</label>
+            <label for="name">Name</label>
           </div>
           <div class="col span-2-of-3">
             <input type="text" name="name" id="name" placeholder="Your name" required>
@@ -316,7 +321,7 @@
         </div>
         <div class="row">
           <div class="col span-1-of-3">
-            <label>Email</label>
+            <label for="email">Email</label>
           </div>
           <div class="col span-2-of-3">
             <input type="email" name="email" id="email" placeholder="Your email" required>
@@ -324,17 +329,76 @@
         </div>
         <div class="row">
           <div class="col span-1-of-3">
-            <label>How did you find us?</label>
+            <label for="find-us">How did you find us?</label>
           </div>
           <div class="col span-2-of-3">
             <select name="find-us" id="find-us">
-              <option value="friends">Friends</option>
+              <option value="friends" selected>Friends</option>
               <option value="search">Search Engine</option>
+              <option value="ad">Advertizement</option>
+              <option value="other">Other</option>
             </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="checkbox">Newsletter?</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="checkbox" name="news" id="news" checked> Yes, please!
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="message">Drop us a line</label>
+          </div>
+          <div class="col span-2-of-3">
+            <textarea name="message" placeholder="Your message"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3">
+            <label for="submit">&nbsp;</label>
+          </div>
+          <div class="col span-2-of-3">
+            <input type="submit" value="Send it!">
           </div>
         </div>
       </form>
     </div>
   </section>
+
+  <footer>
+    <div class="row">
+      <div class="col span-1-of-2">
+        <ul class="footer-nav">
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">iOS App</a></li>
+          <li><a href="#">Andriod App</a></li>
+        </ul>
+      </div>
+      <div class="col span-1-of-2">
+        <ul class="social-icons">
+          <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+          <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+          <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+          <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <p>Copyright &copy; 2015 by Omnifood. All rights reserved.</p>
+    </div>
+  </footer>
   </body>
+
+<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="resources\js\script.js"></script>
+<script src="vendors\js\jquery.waypoints.min.js"></script>
+
 </html>
