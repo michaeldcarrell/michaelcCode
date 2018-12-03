@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+#### ******* Forensic Glass ****** ####
+
+=======
+>>>>>>> d5273530843eefa04b5e099017cbb2abe34c7523
 library(textir) ## needed to standardize the data
 library(MASS)   ## a library of example datasets
 
@@ -34,12 +39,17 @@ train <- sample(1:n,nt)
 ## standardize.
 ## Even simpler, use the normalize function in the R-package textir; 
 ## it converts data frame columns to mean-zero sd-one
+<<<<<<< HEAD
+library(BBmisc)
+x <- normalize(fgl[,c(4,1)])
+=======
 
 ## x <- normalize(fgl[,c(4,1)])
 x=fgl[,c(4,1)]
 x[,1]=(x[,1]-mean(x[,1]))/sd(x[,1])
 x[,2]=(x[,2]-mean(x[,2]))/sd(x[,2])
 
+>>>>>>> d5273530843eefa04b5e099017cbb2abe34c7523
 x[1:3,]
 
 library(class)  
@@ -77,12 +87,16 @@ pcorr
 
 ## using all nine dimensions (RI plus 8 chemical concentrations)
 
+<<<<<<< HEAD
+x <- normalize(fgl[,c(1:9)])
+=======
 ## x <- normalize(fgl[,c(1:9)])
 x=fgl[,c(1:9)]
 for (j in 1:9) {
   x[,j]=(x[,j]-mean(x[,j]))/sd(x[,j])
 }
 
+>>>>>>> d5273530843eefa04b5e099017cbb2abe34c7523
 nearest1 <- knn(train=x[train,],test=x[-train,],cl=fgl$type[train],k=1)
 nearest5 <- knn(train=x[train,],test=x[-train,],cl=fgl$type[train],k=5)
 data.frame(fgl$type[-train],nearest1,nearest5)
@@ -103,6 +117,8 @@ for (k in 1:10) {
 }
 pcorr
 
+<<<<<<< HEAD
+=======
 #### ******* German Credit Data ******* ####
 #### ******* data on 1000 loans ******* ####
 
@@ -189,3 +205,4 @@ credit$pred<-round(predict.lm(creditLM,credit))
 credit$correct<-credit$pred == credit$Default
 percentCorrect<-nrow(credit[credit$correct==T,])/nrow(credit)
 percentCorrect
+>>>>>>> d5273530843eefa04b5e099017cbb2abe34c7523
