@@ -2,7 +2,7 @@ set.seed(1)
 library(car)	#used to recode a variable
 
 ## reading the data
-delay <- read.csv("C:/DataMining/Data/FlightDelays.csv")
+delay <- read.csv(file.choose())
 delay
 del=data.frame(delay)
 del$schedf=factor(floor(del$schedtime/100))
@@ -112,6 +112,13 @@ error
 ## coding as 1 if probability 0.3 or larger
 gg2=floor(gg+0.7)
 ttt=table(response[-train],gg2)
+ttt
+error=(ttt[1,2]+ttt[2,1])/n2
+error
+
+## coding as 1 if probability 0.7 or larger
+gg3=floor(gg+0.4)
+ttt=table(response[-train],gg3)
 ttt
 error=(ttt[1,2]+ttt[2,1])/n2
 error
