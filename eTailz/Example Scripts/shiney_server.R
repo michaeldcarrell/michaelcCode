@@ -4,12 +4,12 @@ library(RMySQL)
 library(rlang)
 library(shinyjs)
 
-source("P:/Employees/MichaelC/R/Compliance_Product_Tracking MySQL Connect.R")
-crude_sku_status<-fetch(dbSendQuery(compliance_product_tracking, "SELECT * FROM crude_sku_status"),n=-1)
-dbDisconnect(compliance_product_tracking)
-source("P:/Employees/MichaelC/R/Unity MySQL Connect.R")
-UnityVendors<-fetch(dbSendQuery(unity, 'Select v.name, v.id From vendors v Order By v.name'), n=-1)
-dbDisconnect(unity)
+#source("P:/Employees/MichaelC/R/Compliance_Product_Tracking MySQL Connect.R")
+#crude_sku_status<-fetch(dbSendQuery(compliance_product_tracking, "SELECT * FROM crude_sku_status"),n=-1)
+#dbDisconnect(compliance_product_tracking)
+#source("P:/Employees/MichaelC/R/Unity MySQL Connect.R")
+#UnityVendors<-fetch(dbSendQuery(unity, 'Select v.name, v.id From vendors v Order By v.name'), n=-1)
+#dbDisconnect(unity)
 
 crude_sku_status<-c("multi-asin",
                     "multi-asin-denied",
