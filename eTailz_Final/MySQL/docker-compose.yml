@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+  mysql:
+    image: mysql:5.7.23
+    command: --default-authentication-plugin=mysql_native_password --max_allowed_packet=32505856 
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: '&r3ak#astC@kes'
+      MYSQL_USER: dropship
+      MYSQL_PASSWORD: Da7aD0nut5
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - 3306:3306

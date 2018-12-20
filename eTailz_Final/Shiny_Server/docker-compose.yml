@@ -1,0 +1,11 @@
+version: '3'
+services:
+  shiny-server:
+    image: my_shiny
+    restart: always
+    volumes:
+      - ./apps:/srv/shiny-server
+      - ./logs:/var/log/shiny-server
+      - /home/dropship/lib:/home/shiny/lib
+    ports:
+      - 80:3838
