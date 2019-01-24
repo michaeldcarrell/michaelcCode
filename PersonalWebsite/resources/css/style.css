@@ -59,6 +59,15 @@ h2 {
   margin: 80px;
 }
 
+.individual-header {
+  position: absolute;
+  top: 0%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  float: left;
+  margin: 60px;
+}
+
 .main-nav {
   float: right;
   list-style: none;
@@ -93,7 +102,8 @@ h1 a:visited {
 
 /* Dropdown Button */
 .dropbtn-michael,
-.dropbtn-hanna {
+.dropbtn-hanna,
+.dropbtn {
   padding-top: 16px;
   padding-left: 16px;
   padding-right: 16px;
@@ -109,21 +119,25 @@ h1 a:visited {
 .dropbtn-hanna:hover,
 .dropbtn-hanna:focus,
 .dropbtn-michael:hover,
-.dropbtn-michael:focus {
+.dropbtn-michael:focus,
+.dropbtn:hover,
+.dropbtn:focus {
     border-bottom: 2px solid #dcdde1;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown-hanna,
-.dropdown-michael {
-    margin: 20px, 15px, 5px, 15px;
+.dropdown-michael,
+.dropdown {
+    margin: 30px, 5px, 5px, 15px;
     position: relative;
     display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content-hanna,
-.dropdown-content-michael {
+.dropdown-content-michael,
+.dropdown-content {
     display: none;
     position: absolute;
     padding: 0%;
@@ -133,7 +147,8 @@ h1 a:visited {
 
 /* Links inside the dropdown */
 .dropdown-content-hanna a,
-.dropdown-content-michael a {
+.dropdown-content-michael a,
+.dropdown-content a {
     color: black;
     text-decoration: none;
     display: block;
@@ -148,8 +163,15 @@ h1 a:visited {
 
 /* Change color of dropdown links on hover */
 .dropdown-content-hanna a:hover,
-.dropdown-content-michael a:hover {
+.dropdown-content-michael a:hover,
+.dropdown-content a:hover {
   background-color: #ddd
+}
+
+.individual-bio {
+  left: -10px;
+  float: left;
+  margin: 80px;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
